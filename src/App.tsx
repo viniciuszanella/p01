@@ -69,9 +69,6 @@ export default function App() {
                 src="/livro-principal.jpg" 
                 alt="Ebook 50 Recetas de Cosmética Natural" 
                 className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop';
-                }}
               />
             </div>
           </div>
@@ -153,9 +150,6 @@ export default function App() {
                 src="/autora.png" 
                 alt="Carla Mendoza" 
                 className="w-full h-full object-cover rounded-full border-4 border-sage-100"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=500&auto=format&fit=crop';
-                }}
               />
             </div>
             <div>
