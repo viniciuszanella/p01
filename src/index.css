@@ -1,334 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --verde:        #2d5a27;
-  --verde-claro:  #4a7c3f;
-  --terracota:    #b5541e;
-  --arena:        #f5f0e8;
-  --arena-dark:   #e8e0cc;
-  --blanco:       #fdfcf8;
-  --negro:        #1c1c1c;
-  --rojo:         #c0392b;
+@theme {
+  --font-serif: "Fraunces", serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #f8f4eb;
+  --color-sand-200: #ebdcc0;
+  --color-sand-800: #5c4e3a;
+  --color-sand-900: #4a3e2e;
+
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e3ebe3;
+  --color-sage-600: #5c7a5c;
+  --color-sage-700: #4a624a;
+  --color-sage-800: #3d523d;
+  --color-sage-900: #314231;
+
+  --color-terracotta-500: #c86b53;
+  --color-terracotta-600: #b05a45;
 }
 
-body { font-family:'Lato',sans-serif; background:var(--arena); color:var(--negro); }
-
-/* ── BANNER ── */
-.banner {
-  background:var(--rojo);
-  color:#fff;
-  text-align:center;
-  padding:10px 16px;
-  font-size:14px;
-  font-weight:700;
-}
-.stars { color:#FFD700; letter-spacing:2px; }
-
-/* ── HERO ── */
-.hero {
-  max-width:860px;
-  margin:0 auto;
-  padding:48px 24px 24px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-.hero-pre {
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  color:#555;
-  margin-bottom:8px;
-}
-.hero-num {
-  font-family:'Cinzel',serif;
-  font-size:88px;
-  color:var(--verde);
-  line-height:1;
-}
-.hero-label {
-  font-family:'Cinzel',serif;
-  font-size:16px;
-  color:var(--terracota);
-  font-weight:700;
-  letter-spacing:2px;
-  line-height:1.5;
-  margin-bottom:12px;
-  text-transform:uppercase;
-}
-.hero-headline {
-  font-family:'Playfair Display',serif;
-  font-size:36px;
-  font-weight:700;
-  color:var(--verde);
-  line-height:1.15;
-  margin-bottom:12px;
-}
-.hero-sub {
-  font-size:14px;
-  color:#444;
-  line-height:1.7;
-  margin-bottom:6px;
-}
-.hero-destaque {
-  font-size:15px;
-  font-weight:700;
-  color:var(--terracota);
-  line-height:1.6;
-}
-.hero-img img {
-  width:100%;
-  border-radius:10px;
-  box-shadow:0 12px 40px rgba(0,0,0,0.12);
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sand-50);
+  color: var(--color-sand-900);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── CTA ── */
-.cta-wrap { text-align:center; padding:20px; }
-.btn {
-  background:var(--rojo);
-  color:#fff;
-  font-size:17px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  padding:17px 48px;
-  border:none;
-  border-radius:50px;
-  cursor:pointer;
-  display:inline-block;
-  text-decoration:none;
-  transition:background .2s;
-}
-.btn:hover { background:#a93226; }
-
-/* ── GALERIA ── */
-.galeria {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  max-width:860px;
-  margin:0 auto 40px;
-  padding:0 24px;
-}
-.galeria img {
-  width:100%; border-radius:8px;
-  aspect-ratio:1; object-fit:cover;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
 }
 
-/* ── SEÇÃO GENÉRICA ── */
-.sec {
-  max-width:860px;
-  margin:0 auto;
-  padding:40px 24px;
-}
-.sec-titulo {
-  font-family:'Playfair Display',serif;
-  font-size:24px;
-  font-weight:700;
-  text-align:center;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  color:var(--negro);
-  margin-bottom:28px;
-}
-.sec-titulo span { color:var(--verde); }
-
-/* ── IDEAL PARA TI ── */
-.checks { list-style:none; display:flex; flex-direction:column; gap:14px; padding: 0; }
-.checks li {
-  display:flex; gap:10px;
-  font-size:15px; line-height:1.65; color:#333;
-}
-.chk {
-  background:var(--verde); color:#fff;
-  width:20px; height:20px; border-radius:4px;
-  display:flex; align-items:center; justify-content:center;
-  flex-shrink:0; margin-top:3px; font-size:11px;
-}
-.checks strong { color:var(--terracota); }
-
-/* ── PRODUTO ── */
-.prod-box {
-  background:var(--blanco);
-  border-radius:14px;
-  padding:40px;
-}
-.capa-wrap { text-align:center; margin-bottom:28px; }
-.capa-wrap img {
-  max-width:220px;
-  border-radius:10px;
-  box-shadow:0 16px 40px rgba(0,0,0,0.14);
-}
-.prod-titulo {
-  font-family:'Cinzel',serif;
-  font-size:18px;
-  color:var(--verde);
-  font-weight:700;
-  text-align:center;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:20px;
-}
-.prod-desc {
-  font-size:15px; color:#444; line-height:1.75;
-  max-width:580px; margin:0 auto;
-}
-.prod-desc strong { color:var(--terracota); }
-.prod-desc p { margin-bottom:14px; }
-
-/* ── TESTIMONIOS ── */
-.test-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-.test {
-  background:var(--blanco);
-  border-radius:10px;
-  padding:18px;
-  font-size:14px; line-height:1.65; color:#333;
-}
-.test .nome {
-  font-weight:700; color:var(--verde);
-  font-size:13px; margin-bottom:6px;
+.text-balance {
+  text-wrap: balance;
 }
 
-/* ── ORDER BUMP ── */
-.bump-section {
-  background:var(--verde);
-  color:#fff;
-  padding:40px 24px;
-  text-align:center;
-}
-.bump-inner { max-width:680px; margin:0 auto; }
-.bump-tag {
-  display:inline-block;
-  background:var(--terracota);
-  font-size:11px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  padding:5px 14px;
-  border-radius:20px;
-  margin-bottom:16px;
-}
-.bump-titulo {
-  font-family:'Playfair Display',serif;
-  font-size:26px;
-  font-weight:700;
-  line-height:1.2;
-  margin-bottom:14px;
-}
-.bump-sub {
-  font-size:14px;
-  opacity:.85;
-  line-height:1.7;
-  margin-bottom:20px;
-}
-.bump-preco {
-  font-family:'Cinzel',serif;
-  font-size:28px;
-  font-weight:700;
-  color:#FFD700;
-  margin-bottom:6px;
-}
-.bump-preco-sub { font-size:12px; opacity:.7; margin-bottom:20px; }
-.btn-bump {
-  background:var(--terracota);
-  color:#fff;
-  font-size:15px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  padding:14px 36px;
-  border:none;
-  border-radius:50px;
-  cursor:pointer;
-  text-decoration:none;
-  display:inline-block;
-  transition:background .2s;
-}
-.btn-bump:hover { background:#9c3e12; }
-
-/* ── PREÇO FINAL ── */
-.preco-final {
-  text-align:center;
-  padding:40px 24px;
-  background:var(--arena-dark);
-}
-.preco-label {
-  font-size:15px; font-weight:700;
-  text-transform:uppercase; margin-bottom:6px;
-}
-.preco-label span { color:var(--rojo); text-decoration:underline; }
-.preco-valor {
-  font-family:'Cinzel',serif;
-  font-size:58px;
-  color:var(--verde);
-  font-weight:700;
-  line-height:1;
-  margin-bottom:20px;
-}
-
-/* ── COMO COMPRAR ── */
-.passos {
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:0;
-  max-width:520px;
-  margin:24px auto 0;
-}
-.passo { flex:1; text-align:center; }
-.passo-ico {
-  width:48px; height:48px; border-radius:50%;
-  border:2px solid var(--verde);
-  margin:0 auto 8px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:18px;
-}
-.passo p { font-size:12px; color:#444; line-height:1.5; }
-.linha-passo {
-  flex:.4; height:2px;
-  background:var(--verde);
-  margin-top:24px;
-}
-
-/* ── FAQ ── */
-.faq-item {
-  background:var(--blanco);
-  border-radius:8px;
-  padding:15px 18px;
-  margin-bottom:8px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-  font-size:14px;
-  font-weight:600;
-}
-.faq-item:hover { background:var(--arena-dark); }
-.plus { font-size:20px; color:var(--verde); flex-shrink:0; margin-left:10px; }
-.faq-resp {
-  display:none;
-  background:#fff;
-  border-radius:0 0 8px 8px;
-  padding:14px 18px;
-  font-size:14px;
-  line-height:1.7;
-  color:#555;
-  margin-top:-8px;
-  margin-bottom:8px;
-}
-.faq-resp.open { display:block; }
-
-/* ── RESPONSIVE ── */
-@media(max-width:680px){
-  .hero { grid-template-columns:1fr; }
-  .hero-img { order:-1; }
-  .hero-num { font-size:64px; }
-  .hero-headline { font-size:28px; }
-  .galeria { grid-template-columns:repeat(2,1fr); }
-  .test-grid { grid-template-columns:1fr; }
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
